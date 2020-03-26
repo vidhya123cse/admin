@@ -1,17 +1,4 @@
-<!--
-=========================================================
-* Material Dashboard Dark Edition - v2.1.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-dark
-* Copyright 2019 Creative Tim (http://www.creative-tim.com)
-
-* Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +17,8 @@
   <!-- CSS Files -->
   <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='demo/demo.css') }}">
+
 </head>
 
 <body class="dark-edition">
@@ -42,62 +30,47 @@
   
           Tip 2: you can also add an image using data-image tag
       -->
-        <div class="logo"><a href="index.html" class="simple-text logo-normal">
-            PINPOINT ADMIN
-          </a></div>
-        <div class="sidebar-wrapper">
-          <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="./dashboard.html">
-                <i class="material-icons">dashboard</i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./user.html">
-                <i class="material-icons">accessibility</i>
-                <p>Verify User</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./tables.html">
-                <i class="material-icons">camera_roll</i>
-                <p>Request phase</p>
-              </a>
-            </li>
-            <li class="nav-item active ">
-              <a class="nav-link" href="./add_third.html">
-                <i class="material-icons">add_circle</i>
-                <p>Add a Third Party</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./add_admin.html">
-                <i class="material-icons">add_circle</i>
-                <p>Add an Admin</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./remove.html">
-                <i class="material-icons">content_cut</i>
-                <p>Edit input media</p>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./notifications.html">
-                <i class="material-icons">notifications</i>
-                <p>Notifications</p>
-              </a>
-            </li>
-            <!-- <li class="nav-item active-pro ">
-                  <a class="nav-link" href="./upgrade.html">
-                      <i class="material-icons">unarchive</i>
-                      <p>Upgrade to PRO</p>
-                  </a>
-              </li> -->
-          </ul>
-        </div>
-      </div>
+      <div class="logo"><a href="index.html" class="simple-text logo-normal">
+        PINPOINT ADMIN
+      </a></div>
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li class="nav-item  ">
+          <a class="nav-link " href="/admin">
+            <i class="material-icons">dashboard</i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user">
+            <i class="material-icons">accessibility</i>
+            <p>Verify User</p>
+          </a>
+        </li>
+      
+        <li class="nav-item ">
+          <a class="nav-link" href="/third_party">
+            <i class="material-icons">add_circle</i>
+            <p>Add a Third Party</p>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/add_admin">
+            <i class="material-icons">add_circle</i>
+            <p>Add an Admin</p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/remove_user">
+            <i class="material-icons">content_cut</i>
+            <p>Remove Users</p>
+          </a>
+        </li>
+        <li class="nav-item ">
+       
+      </ul>
+    </div>
+  </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
@@ -199,7 +172,7 @@
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.js?v=2.1.0"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
+  <script src="{{url_for('static', filename='demo/demo.js')}}"></script>
   
 </body>
 
