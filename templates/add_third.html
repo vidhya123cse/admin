@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +30,7 @@ CSS Just for demo purpose, don't include it in your project
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='demo/demo.css') }}">
 </head>
 
+
 <body class="dark-edition">
   <body class="dark-edition">
     <div class="wrapper ">
@@ -38,53 +40,53 @@ CSS Just for demo purpose, don't include it in your project
   
           Tip 2: you can also add an image using data-image tag
       -->
-        <div class="logo"><a href="index.html" class="simple-text logo-normal">
-          PINPOINT ADMIN
-        </a></div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item ">
-            <a class="nav-link " href="/admin">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/user">
-              <i class="material-icons">accessibility</i>
-              <p>Verify User</p>
-            </a>
-          </li>
-        
-          <li class="nav-item ">
-            <a class="nav-link" href="/third_party">
-              <i class="material-icons">add_circle</i>
-              <p>Add a Third Party</p>
-            </a>
-          </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="/add_admin">
-              <i class="material-icons">add_circle</i>
-              <p>Add an Admin</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/remove_user">
-              <i class="material-icons">content_cut</i>
-              <p>Remove Users</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-         
-        </ul>
-      </div>
+      <div class="logo"><a href="index.html" class="simple-text logo-normal">
+        PINPOINT ADMIN
+      </a></div>
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li class="nav-item  ">
+          <a class="nav-link " href="/admin">
+            <i class="material-icons">dashboard</i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user">
+            <i class="material-icons">accessibility</i>
+            <p>Verify User</p>
+          </a>
+        </li>
+      
+        <li class="nav-item active">
+          <a class="nav-link" href="/third_party">
+            <i class="material-icons">add_circle</i>
+            <p>Add a Third Party</p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/add_admin">
+            <i class="material-icons">add_circle</i>
+            <p>Add an Admin</p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/remove_user">
+            <i class="material-icons">content_cut</i>
+            <p>Remove Users</p>
+          </a>
+        </li>
+        <li class="nav-item ">
+       
+      </ul>
     </div>
+  </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Add more admin </a>
+            <a class="navbar-brand" href="javascript:void(0)">Add a Third Party</a>
           </div>
           
           <div class="collapse navbar-collapse justify-content-end">
@@ -105,65 +107,41 @@ CSS Just for demo purpose, don't include it in your project
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-10">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add Profile</h4>
-                  <p class="card-category">Basic Details</p>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row">
-                     
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Fist Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Phone number</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                 
-                    <div class="text-center"> 
-                    <button type="submit" class="btn btn-primary">Add Admin</button>
-                   
-                  </form>
-                </div>
-              </div>
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title">Add a Third Party Entity</h4>
+              <p class="card-category">No other third party can enrolled without permission of admin</p>
             </div>
-            
-            
-          </div>
-        </div>
-      </div>
+            <div class="card-body">
+              <div id="typography"><br><br>
+                  <center>
+                  <div class="col-md-6" id ="mass" style="background-color: lightblue;">
+                  <form>
+                  <h4><b style="color:black;"></style>Input Department</b>
+                  </h4>
+                  <div class ="container-fluid">
+                  <input type="text"  class="form-control"  id='firstList'  style="background-color:cadetblue;">
+                  
+                              
+                   <br>
+                  <h4><b style="color:black;">Enter Name With Location</h4></b>
+                   <input type="text" class="form-control"  id='secondList' name='secondList' style="background-color:cadetblue;">
+                   <br>
+                   <h4><b style="color:black;">Official Email Id</h4></b>
+                   <input type="email"  class="form-control"  id='thirdList'  style="background-color:cadetblue;">
+                   <br>
+                  </div>
+                 
+                    <div class="text-center"> <button type="button" class="btn btn-primary btn-lg" style="max-width: 300px;margin-left: 10px; background-color:#2dc997; margin-bottom: 10px;"> Send Temporary Id and Psw</button>
+                   <button type="reset" class="btn btn-danger" style="max-width:300px;margin-left: 10px; margin-bottom: 10px;"> Reset The Field 
+                            </button></div>
+                          </div>
+                   <br><br><br>
+                  </form>
+                  </div>
+                  
+                  </center>
+
       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-centre">
@@ -183,7 +161,7 @@ CSS Just for demo purpose, don't include it in your project
           </nav>
          
       </footer>
-     
+     </div></div></div></div></div></div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
