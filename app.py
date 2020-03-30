@@ -24,8 +24,9 @@ class Third(db.Model):
         self.dept=dept
         self.city=city
 
-    # def __repr__(self):
-     #   return '[Choice {}]'.format(self.dept)
+    def __repr__(self):
+
+        return '[Choice {}]'.format(self.dept)
 
 def choice_query():
     return Third.query
@@ -37,7 +38,7 @@ class ChoiceForm(FlaskForm):
 def select():
     form = ChoiceForm()
 
-   # form.opts.query = Choice.query.filter(Third.dept)
+    form.opts.query = Third.query.filter(Third.dept)
 
     if form.validate_on_submit():
         return '<html><h1>{}</h1></html>'.format(form.opts.data)

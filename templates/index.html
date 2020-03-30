@@ -1,10 +1,10 @@
-html>
+<html>
 <head>
     <title>Form</title>
 </head>
 <body>
     <form action="/" method="POST">
-        
+        {{ form.csrf_token }}
         {{ form.opts }}
         <ul>
             {% for error in form.opts.errors %}
