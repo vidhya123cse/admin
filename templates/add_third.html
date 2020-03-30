@@ -119,20 +119,35 @@ CSS Just for demo purpose, don't include it in your project
                   <form>
                   <h4><b style="color:black;"></style>Input Department</b>
                   </h4>
-                  <div class ="container-fluid">
-                  <input type="text"  class="form-control"  id='firstList'  style="background-color:cadetblue;">
+
+ <div class ="container-fluid">
+                  <select class="form-control"  id='firstList' name='firstList' onchange="showfield(this.options[this.selectedIndex].value)" style="background-color:cadetblue;"   pattern="[A-Za-z]" required>
+                  <option class="dropdown-item" value="0">--Select--</option>
+                  <option class="dropdown-item" value="1">Railways</option>
+                  <option class="dropdown-item" value="2">Police</option>
+                  <option class="dropdown-item" value="Other">Other</option>
                   
-                              
-                   <br>
-                  <h4><b style="color:black;">Enter Name With Location</h4></b>
-                   <input type="text" class="form-control"  id='secondList' name='secondList' style="background-color:cadetblue;">
-                   <br>
+    </select>
+
+                   
+            
+                   <br>  <div class ="container-fluid" id="div1">
+                  <h4><b style="color:black;">Input New Department</h4></b>
+                
+                   <input type="text" class="form-control"  id='secondList' name='secondList' style="background-color:cadetblue;" required>
+                   <br></div>
+
+                    <h4><b style="color:black;">Enter Name With Location</h4></b>
+                  
+                     <input type="text" class="form-control"  id='secondList' name='secondList' style="background-color:cadetblue;" required>
+                     <br>
+                   
                    <h4><b style="color:black;">Official Email Id</h4></b>
-                   <input type="email"  class="form-control"  id='thirdList'  style="background-color:cadetblue;">
+                   <input type="email"  class="form-control"  id='thirdList'  style="background-color:cadetblue;" required>
                    <br>
                   </div>
                  
-                    <div class="text-center"> <button type="button" class="btn btn-primary btn-lg" style="max-width: 300px;margin-left: 10px; background-color:#2dc997; margin-bottom: 10px;"> Send Temporary Id and Psw</button>
+                    <div class="text-center"> <button type="submit" class="btn btn-primary btn-lg" style="max-width: 300px;margin-left: 10px; background-color:#2dc997; margin-bottom: 10px;"> Send Temporary Id and Psw</button>
                    <button type="reset" class="btn btn-danger" style="max-width:300px;margin-left: 10px; margin-bottom: 10px;"> Reset The Field 
                             </button></div>
                           </div>
@@ -141,6 +156,20 @@ CSS Just for demo purpose, don't include it in your project
                   </div>
                   
                   </center>
+
+
+                  <script type="text/javascript">
+                    function showfield(name){
+                      if(name=='Other')document.getElementById('div1').style.display="block";
+                      else document.getElementById('div1').style.display="none";
+                    }
+                   
+                   function hidefield() {
+                   document.getElementById('div1').style.display='none';
+                   }
+                    </script>
+                   
+                    <body onload="hidefield()">
 
       <footer class="footer">
         <div class="container-fluid">
