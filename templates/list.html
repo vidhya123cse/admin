@@ -1,0 +1,16 @@
+{% extends 'layout.html' %
+
+{% block body %}
+  <h1>List of Users</h1>
+  <ul class="list-group">
+    {% for user in users %}
+      <li class="list-group-item"><a href="Users/{{Admin.id}}">{{Admin.name}}</a>
+        <button class="btn-success">EDIT</button>  <button class="btn-danger">DELETE</button>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between"><p class="p-0 m-0 flex-grow-1">First item</p> 
+        <button class="btn-success">EDIT</button>  <button class="btn-danger">DELETE</button>
+     </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
