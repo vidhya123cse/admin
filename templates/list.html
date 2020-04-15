@@ -14,3 +14,17 @@
     {% endfor %}
   </ul>
 {% endblock %}
+
+
+
+
+if exists > 0:
+return render_template('remove.html', normal=exists)
+if users > 0:
+return render_template('remove.html', users=users)
+elif exists > 0:
+return render_template('remove.html', normal=exists)
+else:
+msg = 'No Users found Found'
+return render_template('list.html', msg=msg)
+# Close connection

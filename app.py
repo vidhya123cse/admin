@@ -115,38 +115,41 @@ def register():
 
 @app.route('/Users')
 def remove():
-    #return render_template('remove.html')
-
-    # Articles
-    # Create cursor
-   
-
-    # Get articles
+    # Original query not typed due to un availabilty of tables...these are demo
     #result = Admin.execute("SELECT * FROM Admin")
 
-    users = Admin.query.all()
-    #exists = Admin.query.filter_by(uname='vidhya').all()
+    admin = Admin.query.all()
 
-    if users > 0:
-        return render_template('remove.html', users=users)
-    else:
-        msg = 'No Users found Found'
-        return render_template('list.html', msg=msg)
-    # Close connection
+    normal= Admin.query.filter_by(uname='visddhya').all()
+    
+    third = Admin.query.filter_by(uname='vidhya123').all()
+
+    officials = Admin.query.filter_by(uname='Suredfj123').all()
+    officials = Admin.query.filter_by(uname='Suredfj123').all()
+     #admin = Admin.query.all()
+
+    #normal=Ordinary.query.all()
+    
+#third = Third.query.all()
+
+    #officials = Authority.query.all()
+    
+    
+    return render_template('remove.html', admin=admin,normal=normal,third=third, officials=officials)
+ 
 
 
-#Single Article
-@app.route('/Users/<string:id>/')
-def list(id):
-    # Create cursor
-    cur = mysql.connection.cursor()
 
-    # Get article
-    result = cur.execute("SELECT * FROM Admin WHERE id = %s", [id])
-
-    all = cur.fetchone()
-
-    return render_template('one_user.html', all=all)
+@app.route('/delete/<id>/', methods = ['GET', 'POST'])
+def delete(id):
+    my_data = Admin.query.get(id)
+    db.session.delete(my_data)
+    db.session.commit()
+   
+    flash("User Deleted Successfully",'success')
+    return redirect(url_for('remove'))
+ 
+  
 
 
 

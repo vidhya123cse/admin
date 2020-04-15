@@ -1,19 +1,19 @@
-<html><body>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-    </tr>
-    </thead>
-    <tbody>
-        {% for row in value %} 
-            <tr>
-                <td>{{row.dept}}</td>
-                <td>{{row.city}}</td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
-</body>
-</html>
+<doctype html>
+    <title>New Album - Flask Music Database</title>
+    <h2>New Album</h2>
+    
+
+ 
+   <form method=post>
+    <dl>
+        {{ render_field(form.uname) }}
+        {{ render_field(form.title) }}
+        {{ render_field(form.release_date) }}
+        {{ render_field(form.publisher) }}
+        {{ render_field(form.media_type) }}
+    </dl>
+    <p><input type=submit value=Submit>
+</form>
+                   
+              
+    </html>
